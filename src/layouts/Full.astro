@@ -1,0 +1,33 @@
+---
+import '../styles/global.css';
+const title = 'Blvr — Dating in focus';
+const description = 'Meet the person before the picture. Discover shared interests, start a conversation, and reveal your photos when you’re ready with Blvr.';
+const canonical = new URL('/', Astro.site);
+const socialImage = new URL('/social-preview.png', Astro.site);
+---
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>{title}</title>
+    <meta name="description" content={description} />
+    <meta name="theme-color" content="#FAFAF7" />
+    <link rel="canonical" href={canonical} />
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <link rel="preload" href="/fonts/Fredoka.ttf" as="font" type="font/ttf" crossorigin />
+    <meta property="og:type" content="website" />
+    <meta property="og:site_name" content="Blvr" />
+    <meta property="og:title" content={title} />
+    <meta property="og:description" content={description} />
+    <meta property="og:url" content={canonical} />
+    <meta property="og:image" content={socialImage} />
+    <meta property="og:image:alt" content="Blvr — Dating in focus, in Sky blue on warm white" />
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:image" content={socialImage} />
+  </head>
+  <body>
+    <a class="skip-link" href="#main-content">Skip to content</a>
+    <slot />
+  </body>
+</html>
