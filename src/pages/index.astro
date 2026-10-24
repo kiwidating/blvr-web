@@ -1,0 +1,45 @@
+---
+import Full from '../layouts/Full.astro';
+import AppLink from '../components/AppLink.astro';
+const interests = ['Bookshop detours', 'Live music', 'Coffee first', 'Weekend hikes', 'Bad puns', 'Dog person'];
+const steps = [
+  { title: 'A person, not just a photo', text: 'Let shared interests and a little personality catch your eye' },
+  { title: 'Something to talk about', text: 'Send a like or leave a note on the detail that drew you in' },
+  { title: 'Reveal on your terms', text: 'Keep a little mystery, then share your photos when you’re ready' },
+];
+---
+<Full>
+  <div class="site-shell">
+    <header class="site-header">
+      <a class="wordmark" href="/" aria-label="Blvr home">Blvr</a>
+      <AppLink secondary>Open Blvr</AppLink>
+    </header>
+    <main id="main-content">
+      <section class="hero" aria-labelledby="hero-title">
+        <div class="hero-copy">
+          <p class="eyebrow">A little curiosity goes a long way</p>
+          <h1 id="hero-title">Dating<br />in <span class="focus-word">focus</span></h1>
+          <p class="intro">Meet the person before the picture</p>
+          <p class="description">Shared interests, good conversations, and a little mystery<br class="desktop-break" /> — until you’re ready to come into focus</p>
+          <div class="hero-actions">
+            <AppLink>Find your connection</AppLink>
+            <a class="waitlist-link" href="https://blvr.app/signin/waitlist">Join the waitlist <span aria-hidden="true">↗</span></a>
+          </div>
+        </div>
+        <div class="hero-visual" aria-hidden="true">
+          <div class="orbit">
+            <div class="outer-ring"></div>
+            <div class="portrait"><img src="/portrait.jpg" alt="" width="360" height="420" fetchpriority="high" /></div>
+            {interests.map((interest, index) => <span class={`interest interest-${index + 1}`}>{interest}</span>)}
+            <span class="heart"><svg width="27" height="27" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M20.8 4.6a5.5 5.5 0 0 0-7.8 0L12 5.7l-1.1-1.1a5.5 5.5 0 0 0-7.8 7.8L12 21l8.8-8.6a5.5 5.5 0 0 0 0-7.8Z" /></svg></span>
+          </div>
+          <p class="visual-caption">A little blurred · A lot to discover</p>
+        </div>
+      </section>
+      <section class="how-it-feels" aria-label="A different way to connect">
+        {steps.map((step, index) => <article><span class="step-number">0{index + 1}</span><div><h2>{step.title}</h2><p>{step.text}</p></div></article>)}
+      </section>
+    </main>
+    <footer><span class="footer-brand">Blvr</span><span>Less pressure, more possibility</span><span>For people 18+</span></footer>
+  </div>
+</Full>
