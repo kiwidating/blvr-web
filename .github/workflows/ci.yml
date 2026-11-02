@@ -20,7 +20,7 @@ jobs:
           persist-credentials: false
       - uses: jdx/mise-action@8418fedb1110381a0d3ba51a7a415d7c1b884550 # v5.2.2
       - name: Validate developer profile and workflow controls
-        uses: nicodes/tools/workflow-standards@66992c7abdb653dac5f7da4a4ec6b7d83737c26c # v0.27.5
+        uses: nicodes/tools/workflow-standards@f412061a7a3f0914db9e09d1159e69504aee8706 # v0.27.5
       - name: Build
         uses: ./.github/actions/build
       - name: Test
