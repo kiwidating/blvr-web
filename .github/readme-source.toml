@@ -1,5 +1,5 @@
 version = 1
-sha256 = "bc5f55da0c2ec3d129b8dd3c59617e0fa24384fc0a98f3dc5b83764bdcfb2a35"
+sha256 = "8f8b83d3662f2f0d09074051388fcad1451b06af5378da3e5478a051a6d41c03"
 
 [history]
 forbidden_commits = ["f10334bdecb8570c0fe76db6fedf8b09867ee660"]

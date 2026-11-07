@@ -25,3 +25,5 @@ pnpm-debug.log*
 
 # local browser inspection artifacts
 .playwright-cli/
+
+/.artifacts/
