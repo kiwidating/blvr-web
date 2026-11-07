@@ -5,4 +5,4 @@ runs:
   steps:
     - name: Build
       shell: bash
-      run: make build
+      run: mise run build

@@ -2,13 +2,13 @@
   "version": 1,
   "profile": "static-website",
   "commands": {
-    "install": ["make", "install"],
-    "lint": ["make", "lint"],
-    "test": ["make", "test"],
-    "build": ["make", "build"],
-    "check": ["make", "check"],
-    "dev": ["make", "dev"],
-    "clean": ["make", "clean"],
+    "install": ["mise", "run", "install"],
+    "lint": ["mise", "run", "lint"],
+    "test": ["mise", "run", "test"],
+    "build": ["mise", "run", "build"],
+    "check": ["mise", "run", "check"],
+    "dev": ["mise", "run", "dev"],
+    "clean": ["mise", "run", "clean"],
     "stop": {
       "unsupported": "Development server stays in the foreground; use Ctrl-C in its terminal"
     }
