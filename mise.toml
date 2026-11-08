@@ -4,6 +4,7 @@ bun = "1.4.1"
 node = "24.18.1"
 
 [env]
+BUN_OPTIONS = "--no-env-file"
 MISE_AUTO_INSTALL = "false"
 MISE_EXEC_AUTO_INSTALL = "false"
 MISE_TASK_RUN_AUTO_INSTALL = "false"
